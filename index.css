@@ -1,51 +1,47 @@
-.grid{
+.grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+
 }
 
-.titulo{
-    grid-column: 2;
-    text-align: right;
+.titulo {
+    grid-column: 1 / -1;
 }
 
-.preco{
-    place-self: start end;
+.info {
+    place-self: start;
+    display: grid;
+    place-items: start;
+    gap: 20px;
 }
 
-.comprar{
-    align-self: start;
-    text-align: center;
-}
-
-.descricao{
-    text-align: right;
-}
-
-body{
+body {
     font-family: arial;
     margin: 40px;
 }
 
-h1, p{
+h1,
+p {
     margin: 0px;
 }
 
-h1{
+h1 {
     font-size: 48px;
     line-height: 1;
 }
 
-p, span{
+p,
+span {
     font-size: 20px;
 }
 
-img{
+img {
     max-width: 100%;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
-.comprar{
+.comprar {
     background: #a8f;
     padding: 10px 10px;
     color: #103;
@@ -54,7 +50,7 @@ img{
     font-size: 20px;
 }
 
-.preco{
+.preco {
     background: #ddd;
     padding: 5px 10px;
     border-radius: 4px;
